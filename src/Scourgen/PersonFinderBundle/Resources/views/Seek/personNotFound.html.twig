@@ -1,0 +1,11 @@
+{% extends 'ScourgenPersonFinderBundle::layout.html.twig' %}
+
+{% set seek_active=1 %}
+{% block headline %}
+ 抱歉
+{% endblock %}
+
+{% block content_content %}
+    <p>您要找的人还没有在本系统里有记，您可以尝试换一个名字进行搜索，或者发布一条寻人信息</p>
+    <a class="btn btn-large btn-success" href="{{ path('post_new_person') }}">新增一条线索</a>
+{% endblock %}

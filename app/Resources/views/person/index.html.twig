@@ -1,0 +1,85 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <h1>Person list</h1>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Entrydate</th>
+                <th>Expirydate</th>
+                <th>Authorname</th>
+                <th>Authoremail</th>
+                <th>Authorphone</th>
+                <th>Sourcename</th>
+                <th>Sourcedate</th>
+                <th>Sourceurl</th>
+                <th>Fullname</th>
+                <th>Givenname</th>
+                <th>Familyname</th>
+                <th>Alternatenames</th>
+                <th>Description</th>
+                <th>Sex</th>
+                <th>Dateofbirth</th>
+                <th>Age</th>
+                <th>Homestreet</th>
+                <th>Homeneighborhood</th>
+                <th>Homecity</th>
+                <th>Homestate</th>
+                <th>Homepostalcode</th>
+                <th>Homecountry</th>
+                <th>Photourl</th>
+                <th>Profileurls</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for person in people %}
+            <tr>
+                <td><a href="{{ path('person_show', { 'id': person.id }) }}">{{ person.id }}</a></td>
+                <td>{% if person.entryDate %}{{ person.entryDate|date('Y-m-d H:i:s') }}{% endif %}</td>
+                <td>{% if person.expiryDate %}{{ person.expiryDate|date('Y-m-d H:i:s') }}{% endif %}</td>
+                <td>{{ person.authorName }}</td>
+                <td>{{ person.authorEmail }}</td>
+                <td>{{ person.authorPhone }}</td>
+                <td>{{ person.sourceName }}</td>
+                <td>{% if person.sourceDate %}{{ person.sourceDate|date('Y-m-d H:i:s') }}{% endif %}</td>
+                <td>{{ person.sourceUrl }}</td>
+                <td>{{ person.fullName }}</td>
+                <td>{{ person.givenName }}</td>
+                <td>{{ person.familyName }}</td>
+                <td>{{ person.alternateNames }}</td>
+                <td>{{ person.description }}</td>
+                <td>{{ person.sex }}</td>
+                <td>{% if person.dateOfBirth %}{{ person.dateOfBirth|date('Y-m-d') }}{% endif %}</td>
+                <td>{{ person.age }}</td>
+                <td>{{ person.homeStreet }}</td>
+                <td>{{ person.homeNeighborhood }}</td>
+                <td>{{ person.homeCity }}</td>
+                <td>{{ person.homeState }}</td>
+                <td>{{ person.homePostalCode }}</td>
+                <td>{{ person.homeCountry }}</td>
+                <td>{{ person.photoUrl }}</td>
+                <td>{{ person.profileUrls }}</td>
+                <td>
+                    <ul>
+                        <li>
+                            <a href="{{ path('person_show', { 'id': person.id }) }}">show</a>
+                        </li>
+                        <li>
+                            <a href="{{ path('person_edit', { 'id': person.id }) }}">edit</a>
+                        </li>
+                    </ul>
+                </td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+    <ul>
+        <li>
+            <a href="{{ path('person_new') }}">Create a new entry</a>
+        </li>
+    </ul>
+{% endblock %}

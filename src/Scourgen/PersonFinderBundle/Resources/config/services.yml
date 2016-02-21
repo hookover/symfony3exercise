@@ -1,0 +1,4 @@
+services:
+#    scourgen_person_finder.example:
+#        class: Scourgen\PersonFinderBundle\Example
+#        arguments: ["@service_id", "plain_value", %parameter%]

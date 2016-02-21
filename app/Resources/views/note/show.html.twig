@@ -1,0 +1,76 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <h1>Note</h1>
+
+    <table>
+        <tbody>
+            <tr>
+                <th>Id</th>
+                <td>{{ note.id }}</td>
+            </tr>
+            <tr>
+                <th>Entrydate</th>
+                <td>{% if note.entryDate %}{{ note.entryDate|date('Y-m-d H:i:s') }}{% endif %}</td>
+            </tr>
+            <tr>
+                <th>Authorname</th>
+                <td>{{ note.authorName }}</td>
+            </tr>
+            <tr>
+                <th>Authoremail</th>
+                <td>{{ note.authorEmail }}</td>
+            </tr>
+            <tr>
+                <th>Authorphone</th>
+                <td>{{ note.authorPhone }}</td>
+            </tr>
+            <tr>
+                <th>Sourcedate</th>
+                <td>{% if note.sourceDate %}{{ note.sourceDate|date('Y-m-d H:i:s') }}{% endif %}</td>
+            </tr>
+            <tr>
+                <th>Author_made_contact</th>
+                <td>{% if note.authormadecontact %}Yes{% else %}No{% endif %}</td>
+            </tr>
+            <tr>
+                <th>Status</th>
+                <td>{{ note.status }}</td>
+            </tr>
+            <tr>
+                <th>Email_of_found_person</th>
+                <td>{{ note.emailoffoundperson }}</td>
+            </tr>
+            <tr>
+                <th>Phone_of_found_person</th>
+                <td>{{ note.phoneoffoundperson }}</td>
+            </tr>
+            <tr>
+                <th>Last_know_location</th>
+                <td>{{ note.lastknowlocation }}</td>
+            </tr>
+            <tr>
+                <th>Text</th>
+                <td>{{ note.text }}</td>
+            </tr>
+            <tr>
+                <th>Photo_url</th>
+                <td>{{ note.photourl }}</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <ul>
+        <li>
+            <a href="{{ path('note_index') }}">Back to the list</a>
+        </li>
+        <li>
+            <a href="{{ path('note_edit', { 'id': note.id }) }}">Edit</a>
+        </li>
+        <li>
+            {{ form_start(delete_form) }}
+                <input type="submit" value="Delete">
+            {{ form_end(delete_form) }}
+        </li>
+    </ul>
+{% endblock %}

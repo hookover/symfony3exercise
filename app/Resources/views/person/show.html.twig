@@ -1,0 +1,124 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <h1>Person</h1>
+
+    <table>
+        <tbody>
+            <tr>
+                <th>Id</th>
+                <td>{{ person.id }}</td>
+            </tr>
+            <tr>
+                <th>Entrydate</th>
+                <td>{% if person.entryDate %}{{ person.entryDate|date('Y-m-d H:i:s') }}{% endif %}</td>
+            </tr>
+            <tr>
+                <th>Expirydate</th>
+                <td>{% if person.expiryDate %}{{ person.expiryDate|date('Y-m-d H:i:s') }}{% endif %}</td>
+            </tr>
+            <tr>
+                <th>Authorname</th>
+                <td>{{ person.authorName }}</td>
+            </tr>
+            <tr>
+                <th>Authoremail</th>
+                <td>{{ person.authorEmail }}</td>
+            </tr>
+            <tr>
+                <th>Authorphone</th>
+                <td>{{ person.authorPhone }}</td>
+            </tr>
+            <tr>
+                <th>Sourcename</th>
+                <td>{{ person.sourceName }}</td>
+            </tr>
+            <tr>
+                <th>Sourcedate</th>
+                <td>{% if person.sourceDate %}{{ person.sourceDate|date('Y-m-d H:i:s') }}{% endif %}</td>
+            </tr>
+            <tr>
+                <th>Sourceurl</th>
+                <td>{{ person.sourceUrl }}</td>
+            </tr>
+            <tr>
+                <th>Fullname</th>
+                <td>{{ person.fullName }}</td>
+            </tr>
+            <tr>
+                <th>Givenname</th>
+                <td>{{ person.givenName }}</td>
+            </tr>
+            <tr>
+                <th>Familyname</th>
+                <td>{{ person.familyName }}</td>
+            </tr>
+            <tr>
+                <th>Alternatenames</th>
+                <td>{{ person.alternateNames }}</td>
+            </tr>
+            <tr>
+                <th>Description</th>
+                <td>{{ person.description }}</td>
+            </tr>
+            <tr>
+                <th>Sex</th>
+                <td>{{ person.sex }}</td>
+            </tr>
+            <tr>
+                <th>Dateofbirth</th>
+                <td>{% if person.dateOfBirth %}{{ person.dateOfBirth|date('Y-m-d') }}{% endif %}</td>
+            </tr>
+            <tr>
+                <th>Age</th>
+                <td>{{ person.age }}</td>
+            </tr>
+            <tr>
+                <th>Homestreet</th>
+                <td>{{ person.homeStreet }}</td>
+            </tr>
+            <tr>
+                <th>Homeneighborhood</th>
+                <td>{{ person.homeNeighborhood }}</td>
+            </tr>
+            <tr>
+                <th>Homecity</th>
+                <td>{{ person.homeCity }}</td>
+            </tr>
+            <tr>
+                <th>Homestate</th>
+                <td>{{ person.homeState }}</td>
+            </tr>
+            <tr>
+                <th>Homepostalcode</th>
+                <td>{{ person.homePostalCode }}</td>
+            </tr>
+            <tr>
+                <th>Homecountry</th>
+                <td>{{ person.homeCountry }}</td>
+            </tr>
+            <tr>
+                <th>Photourl</th>
+                <td>{{ person.photoUrl }}</td>
+            </tr>
+            <tr>
+                <th>Profileurls</th>
+                <td>{{ person.profileUrls }}</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <ul>
+        <li>
+            <a href="{{ path('person_index') }}">Back to the list</a>
+        </li>
+        <li>
+            <a href="{{ path('person_edit', { 'id': person.id }) }}">Edit</a>
+        </li>
+        <li>
+            {{ form_start(delete_form) }}
+                <input type="submit" value="Delete">
+            {{ form_end(delete_form) }}
+        </li>
+    </ul>
+{% endblock %}
