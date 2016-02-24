@@ -1,0 +1,63 @@
+{% extends 'MopaBootstrapBundle::base.html.twig' %}
+
+{% block navbar %}
+    <div class="navbar navbar-default">
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav">
+                <li{% if home_active is defined %} class="active"{% endif %}><a href="{{ path('BloggerBlogBundle_index') }}">Home</a></li>
+                <li{% if about_active is defined %} class="active"{% endif %}><a href="{{ path('BloggerBlogBundle_about') }}">About</a></li>
+                <li{% if contact_active is defined %} class="active"{% endif %}><a href="{{ path('BloggerBlogBundle_contact') }}">Contact</a></li>
+            </ul>
+        </div>
+    </div>
+
+{% endblock navbar %}
+
+{% block title %}
+    Symblog
+{% endblock title %}
+
+{% block headline %}
+{% endblock headline %}
+
+{% block content_content %}
+{% endblock %}
+
+{% block content_sidebar %}
+{% endblock %}
+
+{% block header %}
+
+{% endblock header %}
+
+{% block page_header %}
+        <h1 class="title">{% block blog_title %}Symblog{% endblock %}</h1>
+        <p class="lead description">
+            creating a blog in Symfony2
+        </p>
+{% endblock %}
+
+{% block footer_tag_start %}
+<footer class="footer">
+    {% endblock footer_tag_start %}
+{% block footer %}
+    <div class="container">
+        <p class="text-muted">Symfony3 blog tutorial - created by <a href="https://github.com/dsyph3r">dsyph3r</a></p>
+    </div>
+{% endblock footer %}
+
+{% block head_style %}
+    {% stylesheets filter='less,cssrewrite,?yui_css'
+    '@ScourgenPersonFinderBundle/Resources/public/less/style.less'
+    %}
+    <link href="{{ asset_url }}" type="text/css" rel="stylesheet" media="screen"/>
+    {% endstylesheets %}
+
+    {% stylesheets
+    '@BloggerBlogBundle/Resources/css/style.css'
+    %}
+    <link href="{{ asset_url }}" type="text/css" rel="stylesheet" media="screen"/>
+    {% endstylesheets %}
+{% endblock head_style %}
+
+{% block javascripts %}{% endblock %}

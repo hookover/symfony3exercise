@@ -1,3 +1,33 @@
-blogger_blog_homepage:
+
+BloggerBlogBundle_index:
     path:     /blog
-    defaults: { _controller: BloggerBlogBundle:Default:index }
+    defaults: { _controller: BloggerBlogBundle:Page:index }
+
+BloggerBlogBundle_about:
+    path:   /blog/about
+    defaults: { _controller: BloggerBlogBundle:Page:about}
+    requirements:
+        _method: GET
+
+BloggerBlogBundle_contact:
+    path: /blog/contact
+    defaults: { _controller: BloggerBlogBundle:Page:contact}
+    requirements:
+        _method: GET
+
+BloggerBlogBundle_blog_show:
+    path: /blog/{id}
+    defaults: { _controller: BloggerBlogBundle:Blog:show}
+    requirements:
+        _method: GET
+        id: \d+
+
+BloggerBlogBundle_comment_create:
+    path: /comment/{blog_id}
+    defaults: { _controller:BloggerBlogBundle:Comment:create }
+    requirements:
+        _method: POST
+        blog_id: \d+
+new:
+    path:     /new
+    defaults: { _controller: BloggerBlogBundle:Comment:new }

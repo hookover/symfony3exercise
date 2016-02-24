@@ -4,7 +4,7 @@ imports:
     - { resource: services.yml }
     - { resource: "@ScourgenPersonFinderBundle/Resources/config/services.yml" }
     - { resource: "@BloggerBlogBundle/Resources/config/services.yml" }
-
+    - { resource: "@BloggerBlogBundle/Resources/config/config.yml"}
 # Put parameters here that don't need to change on each machine where the app is deployed
 # http://symfony.com/doc/current/best_practices/configuration.html#application-related-configuration
 parameters:
@@ -48,6 +48,7 @@ assetic:
     bundles:
         - ScourgenPersonFinderBundle
         - MopaBootstrapBundle
+        - BloggerBlogBundle
     filters:
         cssrewrite: ~
         less:
@@ -83,4 +84,4 @@ swiftmailer:
     host:      "%mailer_host%"
     username:  "%mailer_user%"
     password:  "%mailer_password%"
-    spool:     { type: memory }
+#    spool:     { type: memory }

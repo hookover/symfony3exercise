@@ -1,0 +1,26 @@
+{% extends 'BloggerBlogBundle::layout.html.twig' %}
+
+{% block title %} {{ blog.title }} {% endblock %}
+
+{% block content_content %}
+    <article class="blog">
+        <header>
+            <div class="date"><time datetime="{{ blog.created|date('c') }}">{{ blog.created|date('l,F j,Y') }}</time></div>
+            <h2>{{ blog.title }}</h2>
+        </header>
+        <img src="{{ asset(['images/',blog.image] | join) }}" alt="{{ blog.title }} image not found" class="img-responsive">
+        <div>
+            <p>{{ blog.blog }}</p>
+        </div>
+        <section>
+            <h3>Comments</h3>
+            {% include 'BloggerBlogBundle:Comment:index.html.twig' with {'comments':comments} %}
+
+            <h3>Add Comment</h3>
+            {{ render(controller(
+            'BloggerBlogBundle:Comment:new',
+            { 'blog_id': blog.id }
+            )) }}
+
+    </article>
+{% endblock %}

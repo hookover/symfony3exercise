@@ -1,0 +1,13 @@
+{% for comment in comments %}
+    <article class="{{ cycle(['bg-success text-danger','bg-info text-warning'],loop.index0) }}" id="comment-{{ comment.id }}">
+        <header>
+            <p>
+                <span class="highlight">{{ comment.user }}</span>
+                commented <time datetime="{{ comment.created | date('c') }}">{{ comment.created|date('l,F j,Y') }}</time>
+            </p>
+        </header>
+        <p>{{ comment.comment }}</p>
+    </article>
+{% else %}
+    <p>暂无评论,第一个？</p>
+{% endfor %}

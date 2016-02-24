@@ -1,0 +1,45 @@
+{% extends 'BloggerBlogBundle::layout.html.twig' %}
+{% form_theme form 'BloggerBlogBundle:Form:fields.html.twig' %}
+
+{% set contact_active=1 %}
+
+{% block header %}
+{% endblock %}
+
+{% block page_header %}
+{% endblock %}
+{% block content_row %}
+
+    <header>
+        <h1>Contact symblog</h1>
+    </header>
+
+    {% macro session_flash(close, use_raw, class, domain) %}
+        {% import _self as flash_messages %}
+
+        {% if app.session.flashbag.peekAll|length > 0 %}
+            {% for type, messages in app.session.flashbag.all %}
+                {% for message in messages %}
+                    {% if type == 'fos_user_success' %}
+                        {% set type = 'success' %}
+                        {% set domain = 'FOSUserBundle' %}
+                    {% endif %}
+                    {{ flash_messages.flash(type, message, close, use_raw, class, domain) }}
+                {% endfor %}
+            {% endfor %}
+        {% endif %}
+    {% endmacro %}
+
+    <p>Want to contact symblog?</p>
+    <form action="{{ path('BloggerBlogBundle_contact') }}" method="post">
+        {{ form_errors(form) }}
+        {{ form_row(form.name) }}
+        {{ form_row(form.email) }}
+        {{ form_row(form.subject) }}
+        {{ form_row(form.body) }}
+        {{ form_rest(form) }}
+
+        <input type="submit" value="提交">
+    </form>
+
+{% endblock %}
