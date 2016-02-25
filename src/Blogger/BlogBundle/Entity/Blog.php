@@ -16,7 +16,8 @@ use Doctrine\ORM\Mapping as ORM;
  * @ORM\Table(name="blog")
  * @ORM\HasLifecycleCallbacks()
  */
-class Blog{
+class Blog
+{
     /**
      * @ORM\Id
      * @ORM\Column(type="integer")
@@ -65,6 +66,11 @@ class Blog{
     protected $updated;
 
     /**
+     * @ORM\Column(type="string")
+     */
+    protected $slug;
+
+    /**
      * Get id
      *
      * @return integer
@@ -84,6 +90,8 @@ class Blog{
     public function setTitle($title)
     {
         $this->title = $title;
+
+        $this->setSlug($this->title);
 
         return $this;
     }
@@ -141,10 +149,10 @@ class Blog{
      *
      * @return string
      */
-    public function getBlog($length=null)
+    public function getBlog($length = null)
     {
-        if(false === is_null($length) && $length>0)
-            return substr($this->blog,0,$length);
+        if (false === is_null($length) && $length > 0)
+            return substr($this->blog, 0, $length);
         else
             return $this->blog;
     }
@@ -247,7 +255,7 @@ class Blog{
 
     public function __construct()
     {
-        $this->comments=new ArrayCollection();
+        $this->comments = new ArrayCollection();
 
         $this->setCreated(new \DateTime());
         $this->setUpdated(new \DateTime());
@@ -299,4 +307,48 @@ class Blog{
 //    {
 //        return $this->getTitle();
 //    }
+
+    /**
+     * Set slug
+     *
+     * @param string $slug
+     *
+     * @return Blog
+     */
+    public function setSlug($slug)
+    {
+        $this->slug = $this->slugify($slug);
+
+        return $this;
+    }
+
+    /**
+     * Get slug
+     *
+     * @return string
+     */
+    public function getSlug()
+    {
+        return $this->slug;
+    }
+
+    public function slugify($text)
+    {
+        $text = preg_replace('#[^\\pL\d]+#u', '-', $text);
+
+        $text = trim($text, '-');
+
+        if (function_exists('iconv')) {
+            $text = iconv('utf-8', 'us-ascii//TRANSLIT', $text);
+        }
+
+        $text = strtolower($text);
+
+        $text = preg_replace('#[^-\w]+#', '', $text);
+
+        if (empty($text))
+            return 'n-a';
+
+        return $text;
+    }
 }

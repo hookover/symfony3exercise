@@ -15,9 +15,15 @@ BloggerBlogBundle_contact:
     requirements:
         _method: GET
 
+#BloggerBlogBundle_blog_show:
+#    path: /blog/{id}
+#    defaults: { _controller: BloggerBlogBundle:Blog:show}
+#    requirements:
+#        _method: GET
+#        id: \d+
 BloggerBlogBundle_blog_show:
-    path: /blog/{id}
-    defaults: { _controller: BloggerBlogBundle:Blog:show}
+    path: /blog/{id}/{slug}/{comments}
+    defaults: { _controller: BloggerBlogBundle:Blog:show,comments:true}
     requirements:
         _method: GET
         id: \d+

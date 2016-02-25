@@ -19,10 +19,10 @@
         <article class="comment">
             <header>
                 <p class="small">{{ comment.user }} commented on</p>
-                    <a href="{{ path('BloggerBlogBundle_blog_show',{'id':comment.blog.id}) }}#comment-{{ comment.id }}">
+                    <a href="{{ path('BloggerBlogBundle_blog_show',{'id':comment.blog.id,'slug':comment.blog.slug}) }}#comment-{{ comment.id }}">
                         {{ comment.blog.title }}
                     </a>
-                    [ <em><time datetime="{{ comment.created|date('c') }}">{{ comment.created|date('Y-m-d h:iA') }}</time> </em> ]
+                    [ <em><time datetime="{{ comment.created|date('c') }}">{{ comment.created|created_ago }}</time> </em> ]
             </header>
             <p>{{ comment.comment }}</p>
         </article>

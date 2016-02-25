@@ -10,7 +10,7 @@ use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 
 class BlogController extends Controller
 {
-    public function showAction($id)
+    public function showAction($id,$slug=null,$comments=null)
     {
         $em = $this->getDoctrine()->getManager();
         $blog = $em->getRepository('BloggerBlogBundle:Blog')->find($id);
