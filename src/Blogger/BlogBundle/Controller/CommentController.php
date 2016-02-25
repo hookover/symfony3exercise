@@ -37,7 +37,7 @@ class CommentController extends Controller
         if ($form->isValid()) {
             // TODO: Persist the comment entity
             $em=$this->getDoctrine()
-                ->getEntityManager();
+                ->getManager();
             $em->persist($comment);
             $em->flush();
 

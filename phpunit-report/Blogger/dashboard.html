@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <title>Dashboard for /Applications/XAMPP/xamppfiles/htdocs/symfony/src/Blogger</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="../css/bootstrap.min.css" rel="stylesheet">
+  <link href="../css/nv.d3.min.css" rel="stylesheet">
+  <link href="../css/style.css" rel="stylesheet">
+  <!--[if lt IE 9]>
+  <script src="../js/html5shiv.min.js"></script>
+  <script src="../js/respond.min.js"></script>
+  <![endif]-->
+ </head>
+ <body>
+  <header>
+   <div class="container">
+    <div class="row">
+     <div class="col-md-12">
+      <ol class="breadcrumb">
+        <li><a href="../index.html">/Applications/XAMPP/xamppfiles/htdocs/symfony/src</a></li>
+        <li><a href="index.html">Blogger</a></li>
+        <li class="active">(Dashboard)</li>
+
+      </ol>
+     </div>
+    </div>
+   </div>
+  </header>
+  <div class="container">
+   <div class="row">
+    <div class="col-md-12">
+     <h2>Classes</h2>
+    </div>
+   </div>
+   <div class="row">
+    <div class="col-md-6">
+     <h3>Coverage Distribution</h3>
+     <div id="classCoverageDistribution" style="height: 300px;">
+       <svg></svg>
+     </div>
+    </div>
+    <div class="col-md-6">
+     <h3>Complexity</h3>
+     <div id="classComplexity" style="height: 300px;">
+       <svg></svg>
+     </div>
+    </div>
+   </div>
+   <div class="row">
+    <div class="col-md-6">
+     <h3>Insufficient Coverage</h3>
+     <div class="scrollbox">
+      <table class="table">
+       <thead>
+        <tr>
+         <th>Class</th>
+         <th class="text-right">Coverage</th>
+        </tr>
+       </thead>
+       <tbody>
+       <tr><td><a href="BlogBundle/DataFixtures/ORM/LoadBlogData.php.html#15">LoadBlogData</a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="BlogBundle/DataFixtures/ORM/LoadCommentsData.php.html#14">LoadComments</a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="BlogBundle/Tests/Controller/CommentControllerTest.php.html#7">CommentControllerTest</a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="BlogBundle/Tests/Controller/DefaultControllerTest.php.html#7">DefaultControllerTest</a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="BlogBundle/Tests/Controller/PageControllerTest.php.html#7">PageControllerTest</a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="BlogBundle/Tests/Entity/BlogTest.php.html#14">BlogTest</a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="BlogBundle/Entity/Blog.php.html#19">Blog</a></td><td class="text-right">66%</td></tr>
+       <tr><td><a href="BlogBundle/Entity/Comment.php.html#20">Comment</a></td><td class="text-right">86%</td></tr>
+
+       </tbody>
+      </table>
+     </div>
+    </div>
+    <div class="col-md-6">
+     <h3>Project Risks</h3>
+     <div class="scrollbox">
+      <table class="table">
+       <thead>
+        <tr>
+         <th>Class</th>
+         <th class="text-right"><abbr title="Change Risk Anti-Patterns (CRAP) Index">CRAP</abbr></th>
+        </tr>
+       </thead>
+       <tbody>
+       <tr><td><a href="BlogBundle/Entity/Blog.php.html#19">Blog</a></td><td class="text-right">54</td></tr>
+
+       </tbody>
+      </table>
+     </div>
+    </div>
+   </div>
+   <div class="row">
+    <div class="col-md-12">
+     <h2>Methods</h2>
+    </div>
+   </div>
+   <div class="row">
+    <div class="col-md-6">
+     <h3>Coverage Distribution</h3>
+     <div id="methodCoverageDistribution" style="height: 300px;">
+       <svg></svg>
+     </div>
+    </div>
+    <div class="col-md-6">
+     <h3>Complexity</h3>
+     <div id="methodComplexity" style="height: 300px;">
+       <svg></svg>
+     </div>
+    </div>
+   </div>
+   <div class="row">
+    <div class="col-md-6">
+     <h3>Insufficient Coverage</h3>
+     <div class="scrollbox">
+      <table class="table">
+       <thead>
+        <tr>
+         <th>Method</th>
+         <th class="text-right">Coverage</th>
+        </tr>
+       </thead>
+       <tbody>
+       <tr><td><a href="BlogBundle/DataFixtures/ORM/LoadBlogData.php.html#17"><abbr title="LoadBlogData::load">load</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="BlogBundle/DataFixtures/ORM/LoadBlogData.php.html#78"><abbr title="LoadBlogData::getOrder">getOrder</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="BlogBundle/Tests/Controller/PageControllerTest.php.html#9"><abbr title="PageControllerTest::testIndex">testIndex</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="BlogBundle/Tests/Controller/DefaultControllerTest.php.html#9"><abbr title="DefaultControllerTest::testIndex">testIndex</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="BlogBundle/Tests/Controller/CommentControllerTest.php.html#9"><abbr title="CommentControllerTest::testNew">testNew</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="BlogBundle/Entity/Comment.php.html#211"><abbr title="Comment::getUpdated">getUpdated</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="BlogBundle/Entity/Comment.php.html#163"><abbr title="Comment::getApproved">getApproved</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="BlogBundle/Entity/Comment.php.html#71"><abbr title="Comment::setUpdatedValue">setUpdatedValue</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="BlogBundle/Entity/Blog.php.html#291"><abbr title="Blog::removeComment">removeComment</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="BlogBundle/Entity/Blog.php.html#279"><abbr title="Blog::addComment">addComment</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="BlogBundle/Entity/Blog.php.html#267"><abbr title="Blog::setUpdatedValue">setUpdatedValue</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="BlogBundle/Entity/Blog.php.html#251"><abbr title="Blog::getUpdated">getUpdated</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="BlogBundle/Entity/Blog.php.html#191"><abbr title="Blog::setTags">setTags</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="BlogBundle/Entity/Blog.php.html#167"><abbr title="Blog::setImage">setImage</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="BlogBundle/Entity/Blog.php.html#140"><abbr title="Blog::setBlog">setBlog</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="BlogBundle/Entity/Blog.php.html#116"><abbr title="Blog::setAuthor">setAuthor</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="BlogBundle/DataFixtures/ORM/LoadCommentsData.php.html#125"><abbr title="LoadComments::getOrder">getOrder</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="BlogBundle/DataFixtures/ORM/LoadCommentsData.php.html#16"><abbr title="LoadComments::load">load</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="BlogBundle/Tests/Entity/BlogTest.php.html#16"><abbr title="BlogTest::testSlugify">testSlugify</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="BlogBundle/Entity/Blog.php.html#335"><abbr title="Blog::slugify">slugify</abbr></a></td><td class="text-right">88%</td></tr>
+
+       </tbody>
+      </table>
+     </div>
+    </div>
+    <div class="col-md-6">
+     <h3>Project Risks</h3>
+     <div class="scrollbox">
+      <table class="table">
+       <thead>
+        <tr>
+         <th>Method</th>
+         <th class="text-right"><abbr title="Change Risk Anti-Patterns (CRAP) Index">CRAP</abbr></th>
+        </tr>
+       </thead>
+       <tbody>
+       <tr><td><a href="BlogBundle/Entity/Blog.php.html#335"><abbr title="Blog::slugify">slugify</abbr></a></td><td class="text-right">3</td></tr>
+
+       </tbody>
+      </table>
+     </div>
+    </div>
+   </div>
+   <footer>
+    <hr/>
+    <p>
+     <small>Generated by <a href="http://github.com/sebastianbergmann/php-code-coverage" target="_top">PHP_CodeCoverage 3.2.1</a> using <a href="http://php.net/" target="_top">PHP 7.0.1</a> and <a href="https://phpunit.de/">PHPUnit 5.2.9</a> at Fri Feb 26 0:25:59 CST 2016.</small>
+    </p>
+   </footer>
+  </div>
+  <script src="../js/jquery.min.js" type="text/javascript"></script>
+  <script src="../js/bootstrap.min.js" type="text/javascript"></script>
+  <script src="../js/holder.min.js" type="text/javascript"></script>
+  <script src="../js/d3.min.js" type="text/javascript"></script>
+  <script src="../js/nv.d3.min.js" type="text/javascript"></script>
+  <script type="text/javascript">
+$(document).ready(function() {
+  nv.addGraph(function() {
+    var chart = nv.models.multiBarChart();
+    chart.tooltips(false)
+      .showControls(false)
+      .showLegend(false)
+      .reduceXTicks(false)
+      .staggerLabels(true)
+      .yAxis.tickFormat(d3.format('d'));
+
+    d3.select('#classCoverageDistribution svg')
+      .datum(getCoverageDistributionData([6,0,0,0,0,0,0,1,0,1,0,10], "Class Coverage"))
+      .transition().duration(500).call(chart);
+
+    nv.utils.windowResize(chart.update);
+
+    return chart;
+  });
+
+  nv.addGraph(function() {
+    var chart = nv.models.multiBarChart();
+    chart.tooltips(false)
+      .showControls(false)
+      .showLegend(false)
+      .reduceXTicks(false)
+      .staggerLabels(true)
+      .yAxis.tickFormat(d3.format('d'));
+
+    d3.select('#methodCoverageDistribution svg')
+      .datum(getCoverageDistributionData([19,0,0,0,0,0,0,0,0,1,0,56], "Method Coverage"))
+      .transition().duration(500).call(chart);
+
+    nv.utils.windowResize(chart.update);
+
+    return chart;
+  });
+
+  function getCoverageDistributionData(data, label) {
+    var labels = [
+      '0%',
+      '0-10%',
+      '10-20%',
+      '20-30%',
+      '30-40%',
+      '40-50%',
+      '50-60%',
+      '60-70%',
+      '70-80%',
+      '80-90%',
+      '90-100%',
+      '100%'
+    ];
+    var values = [];
+    $.each(labels, function(key) {
+      values.push({x: labels[key], y: data[key]});
+    });
+
+    return [
+      {
+        key: label,
+        values: values,
+        color: "#4572A7"
+      }
+    ];
+  }
+  nv.addGraph(function() {
+    var chart = nv.models.scatterChart()
+      .showDistX(true)
+      .showDistY(true)
+      .showLegend(false)
+      .forceX([0, 100]);
+    chart.tooltipContent(function(key, y, e, graph) {
+      return '<p>' + graph.point.class + '</p>';
+    });
+
+    chart.xAxis.axisLabel('Code Coverage (in percent)');
+    chart.yAxis.axisLabel('Cyclomatic Complexity');
+
+    d3.select('#classComplexity svg')
+      .datum(getComplexityData([[100,0,"<a href=\"BlogBundle\/BloggerBlogBundle.php.html#7\">BloggerBlogBundle<\/a>"],[100,2,"<a href=\"BlogBundle\/Controller\/BlogController.php.html#11\">BlogController<\/a>"],[100,5,"<a href=\"BlogBundle\/Controller\/CommentController.php.html#10\">CommentController<\/a>"],[100,7,"<a href=\"BlogBundle\/Controller\/PageController.php.html#10\">PageController<\/a>"],[0,2,"<a href=\"BlogBundle\/DataFixtures\/ORM\/LoadBlogData.php.html#15\">LoadBlogData<\/a>"],[0,2,"<a href=\"BlogBundle\/DataFixtures\/ORM\/LoadCommentsData.php.html#14\">LoadComments<\/a>"],[66.666666666667,27,"<a href=\"BlogBundle\/Entity\/Blog.php.html#19\">Blog<\/a>"],[86.666666666667,16,"<a href=\"BlogBundle\/Entity\/Comment.php.html#20\">Comment<\/a>"],[100,9,"<a href=\"BlogBundle\/Entity\/Enquiry.php.html#14\">Enquiry<\/a>"],[100,2,"<a href=\"BlogBundle\/Form\/CommentType.php.html#10\">CommentType<\/a>"],[100,1,"<a href=\"BlogBundle\/Form\/EnquiryType.php.html#11\">EnquiryType<\/a>"],[100,12,"<a href=\"BlogBundle\/Repository\/BlogRepository.php.html#13\">BlogRepository<\/a>"],[100,4,"<a href=\"BlogBundle\/Repository\/CommentRepository.php.html#13\">CommentRepository<\/a>"],[0,1,"<a href=\"BlogBundle\/Tests\/Controller\/CommentControllerTest.php.html#7\">CommentControllerTest<\/a>"],[0,1,"<a href=\"BlogBundle\/Tests\/Controller\/DefaultControllerTest.php.html#7\">DefaultControllerTest<\/a>"],[0,1,"<a href=\"BlogBundle\/Tests\/Controller\/PageControllerTest.php.html#7\">PageControllerTest<\/a>"],[0,1,"<a href=\"BlogBundle\/Tests\/Entity\/BlogTest.php.html#14\">BlogTest<\/a>"],[100,13,"<a href=\"BlogBundle\/Twig\/Extensions\/BloggerBlogExtension.php.html#11\">BloggerBlogExtension<\/a>"]], 'Class Complexity'))
+      .transition()
+      .duration(500)
+      .call(chart);
+
+    nv.utils.windowResize(chart.update);
+
+    return chart;
+  });
+
+  nv.addGraph(function() {
+    var chart = nv.models.scatterChart()
+      .showDistX(true)
+      .showDistY(true)
+      .showLegend(false)
+      .forceX([0, 100]);
+    chart.tooltipContent(function(key, y, e, graph) {
+      return '<p>' + graph.point.class + '</p>';
+    });
+
+    chart.xAxis.axisLabel('Code Coverage (in percent)');
+    chart.yAxis.axisLabel('Method Complexity');
+
+    d3.select('#methodComplexity svg')
+      .datum(getComplexityData([[100,2,"<a href=\"BlogBundle\/Controller\/BlogController.php.html#13\">BlogController::showAction<\/a>"],[100,1,"<a href=\"BlogBundle\/Controller\/CommentController.php.html#12\">CommentController::newAction<\/a>"],[100,2,"<a href=\"BlogBundle\/Controller\/CommentController.php.html#27\">CommentController::createAction<\/a>"],[100,2,"<a href=\"BlogBundle\/Controller\/CommentController.php.html#57\">CommentController::getBlog<\/a>"],[100,1,"<a href=\"BlogBundle\/Controller\/PageController.php.html#12\">PageController::indexAction<\/a>"],[100,1,"<a href=\"BlogBundle\/Controller\/PageController.php.html#23\">PageController::aboutAction<\/a>"],[100,4,"<a href=\"BlogBundle\/Controller\/PageController.php.html#30\">PageController::contactAction<\/a>"],[100,1,"<a href=\"BlogBundle\/Controller\/PageController.php.html#59\">PageController::sidebarAction<\/a>"],[0,1,"<a href=\"BlogBundle\/DataFixtures\/ORM\/LoadBlogData.php.html#17\">LoadBlogData::load<\/a>"],[0,1,"<a href=\"BlogBundle\/DataFixtures\/ORM\/LoadBlogData.php.html#78\">LoadBlogData::getOrder<\/a>"],[0,1,"<a href=\"BlogBundle\/DataFixtures\/ORM\/LoadCommentsData.php.html#16\">LoadComments::load<\/a>"],[0,1,"<a href=\"BlogBundle\/DataFixtures\/ORM\/LoadCommentsData.php.html#125\">LoadComments::getOrder<\/a>"],[100,1,"<a href=\"BlogBundle\/Entity\/Blog.php.html#78\">Blog::getId<\/a>"],[100,1,"<a href=\"BlogBundle\/Entity\/Blog.php.html#90\">Blog::setTitle<\/a>"],[100,1,"<a href=\"BlogBundle\/Entity\/Blog.php.html#104\">Blog::getTitle<\/a>"],[0,1,"<a href=\"BlogBundle\/Entity\/Blog.php.html#116\">Blog::setAuthor<\/a>"],[100,1,"<a href=\"BlogBundle\/Entity\/Blog.php.html#128\">Blog::getAuthor<\/a>"],[0,1,"<a href=\"BlogBundle\/Entity\/Blog.php.html#140\">Blog::setBlog<\/a>"],[100,3,"<a href=\"BlogBundle\/Entity\/Blog.php.html#152\">Blog::getBlog<\/a>"],[0,1,"<a href=\"BlogBundle\/Entity\/Blog.php.html#167\">Blog::setImage<\/a>"],[100,1,"<a href=\"BlogBundle\/Entity\/Blog.php.html#179\">Blog::getImage<\/a>"],[0,1,"<a href=\"BlogBundle\/Entity\/Blog.php.html#191\">Blog::setTags<\/a>"],[100,1,"<a href=\"BlogBundle\/Entity\/Blog.php.html#203\">Blog::getTags<\/a>"],[100,1,"<a href=\"BlogBundle\/Entity\/Blog.php.html#215\">Blog::setCreated<\/a>"],[100,1,"<a href=\"BlogBundle\/Entity\/Blog.php.html#227\">Blog::getCreated<\/a>"],[100,1,"<a href=\"BlogBundle\/Entity\/Blog.php.html#239\">Blog::setUpdated<\/a>"],[0,1,"<a href=\"BlogBundle\/Entity\/Blog.php.html#251\">Blog::getUpdated<\/a>"],[100,1,"<a href=\"BlogBundle\/Entity\/Blog.php.html#256\">Blog::__construct<\/a>"],[0,1,"<a href=\"BlogBundle\/Entity\/Blog.php.html#267\">Blog::setUpdatedValue<\/a>"],[0,1,"<a href=\"BlogBundle\/Entity\/Blog.php.html#279\">Blog::addComment<\/a>"],[0,1,"<a href=\"BlogBundle\/Entity\/Blog.php.html#291\">Blog::removeComment<\/a>"],[100,1,"<a href=\"BlogBundle\/Entity\/Blog.php.html#301\">Blog::getComments<\/a>"],[100,1,"<a href=\"BlogBundle\/Entity\/Blog.php.html#318\">Blog::setSlug<\/a>"],[100,1,"<a href=\"BlogBundle\/Entity\/Blog.php.html#330\">Blog::getSlug<\/a>"],[88.888888888889,3,"<a href=\"BlogBundle\/Entity\/Blog.php.html#335\">Blog::slugify<\/a>"],[100,1,"<a href=\"BlogBundle\/Entity\/Comment.php.html#60\">Comment::__construct<\/a>"],[0,1,"<a href=\"BlogBundle\/Entity\/Comment.php.html#71\">Comment::setUpdatedValue<\/a>"],[100,1,"<a href=\"BlogBundle\/Entity\/Comment.php.html#76\">Comment::loadValidatorMetadata<\/a>"],[100,1,"<a href=\"BlogBundle\/Entity\/Comment.php.html#91\">Comment::getId<\/a>"],[100,1,"<a href=\"BlogBundle\/Entity\/Comment.php.html#103\">Comment::setUser<\/a>"],[100,1,"<a href=\"BlogBundle\/Entity\/Comment.php.html#115\">Comment::getUser<\/a>"],[100,1,"<a href=\"BlogBundle\/Entity\/Comment.php.html#127\">Comment::setComment<\/a>"],[100,1,"<a href=\"BlogBundle\/Entity\/Comment.php.html#139\">Comment::getComment<\/a>"],[100,1,"<a href=\"BlogBundle\/Entity\/Comment.php.html#151\">Comment::setApproved<\/a>"],[0,1,"<a href=\"BlogBundle\/Entity\/Comment.php.html#163\">Comment::getApproved<\/a>"],[100,1,"<a href=\"BlogBundle\/Entity\/Comment.php.html#175\">Comment::setCreated<\/a>"],[100,1,"<a href=\"BlogBundle\/Entity\/Comment.php.html#187\">Comment::getCreated<\/a>"],[100,1,"<a href=\"BlogBundle\/Entity\/Comment.php.html#199\">Comment::setUpdated<\/a>"],[0,1,"<a href=\"BlogBundle\/Entity\/Comment.php.html#211\">Comment::getUpdated<\/a>"],[100,1,"<a href=\"BlogBundle\/Entity\/Comment.php.html#223\">Comment::setBlog<\/a>"],[100,1,"<a href=\"BlogBundle\/Entity\/Comment.php.html#235\">Comment::getBlog<\/a>"],[100,1,"<a href=\"BlogBundle\/Entity\/Enquiry.php.html#20\">Enquiry::getName<\/a>"],[100,1,"<a href=\"BlogBundle\/Entity\/Enquiry.php.html#24\">Enquiry::setName<\/a>"],[100,1,"<a href=\"BlogBundle\/Entity\/Enquiry.php.html#28\">Enquiry::getEmail<\/a>"],[100,1,"<a href=\"BlogBundle\/Entity\/Enquiry.php.html#32\">Enquiry::setEmail<\/a>"],[100,1,"<a href=\"BlogBundle\/Entity\/Enquiry.php.html#36\">Enquiry::getSubject<\/a>"],[100,1,"<a href=\"BlogBundle\/Entity\/Enquiry.php.html#40\">Enquiry::setSubject<\/a>"],[100,1,"<a href=\"BlogBundle\/Entity\/Enquiry.php.html#44\">Enquiry::getBody<\/a>"],[100,1,"<a href=\"BlogBundle\/Entity\/Enquiry.php.html#48\">Enquiry::setBody<\/a>"],[100,1,"<a href=\"BlogBundle\/Entity\/Enquiry.php.html#53\">Enquiry::loadValidatorMetadata<\/a>"],[100,1,"<a href=\"BlogBundle\/Form\/CommentType.php.html#16\">CommentType::buildForm<\/a>"],[100,1,"<a href=\"BlogBundle\/Form\/CommentType.php.html#27\">CommentType::configureOptions<\/a>"],[100,1,"<a href=\"BlogBundle\/Form\/EnquiryType.php.html#17\">EnquiryType::buildForm<\/a>"],[100,2,"<a href=\"BlogBundle\/Repository\/BlogRepository.php.html#14\">BlogRepository::getLatestBlogs<\/a>"],[100,3,"<a href=\"BlogBundle\/Repository\/BlogRepository.php.html#26\">BlogRepository::getTags<\/a>"],[100,6,"<a href=\"BlogBundle\/Repository\/BlogRepository.php.html#43\">BlogRepository::getTagWeights<\/a>"],[100,1,"<a href=\"BlogBundle\/Repository\/BlogRepository.php.html#54\">BlogRepository::anonymous function<\/a>"],[100,2,"<a href=\"BlogBundle\/Repository\/CommentRepository.php.html#15\">CommentRepository::getCommentsForBlog<\/a>"],[100,2,"<a href=\"BlogBundle\/Repository\/CommentRepository.php.html#29\">CommentRepository::getLastestComments<\/a>"],[0,1,"<a href=\"BlogBundle\/Tests\/Controller\/CommentControllerTest.php.html#9\">CommentControllerTest::testNew<\/a>"],[0,1,"<a href=\"BlogBundle\/Tests\/Controller\/DefaultControllerTest.php.html#9\">DefaultControllerTest::testIndex<\/a>"],[0,1,"<a href=\"BlogBundle\/Tests\/Controller\/PageControllerTest.php.html#9\">PageControllerTest::testIndex<\/a>"],[0,1,"<a href=\"BlogBundle\/Tests\/Entity\/BlogTest.php.html#16\">BlogTest::testSlugify<\/a>"],[100,1,"<a href=\"BlogBundle\/Twig\/Extensions\/BloggerBlogExtension.php.html#13\">BloggerBlogExtension::getFilters<\/a>"],[100,11,"<a href=\"BlogBundle\/Twig\/Extensions\/BloggerBlogExtension.php.html#22\">BloggerBlogExtension::createdFilters<\/a>"],[100,1,"<a href=\"BlogBundle\/Twig\/Extensions\/BloggerBlogExtension.php.html#62\">BloggerBlogExtension::getName<\/a>"]], 'Method Complexity'))
+      .transition()
+      .duration(500)
+      .call(chart);
+
+    nv.utils.windowResize(chart.update);
+
+    return chart;
+  });
+
+  function getComplexityData(data, label) {
+    var values = [];
+    $.each(data, function(key) {
+      var value = Math.round(data[key][0]*100) / 100;
+      values.push({
+        x: value,
+        y: data[key][1],
+        class: data[key][2],
+        size: 0.05,
+        shape: 'diamond'
+      });
+    });
+
+    return [
+      {
+        key: label,
+        values: values,
+        color: "#4572A7"
+      }
+    ];
+  }
+});
+  </script>
+ </body>
+</html>

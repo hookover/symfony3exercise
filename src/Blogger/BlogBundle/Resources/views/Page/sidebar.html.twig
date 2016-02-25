@@ -18,7 +18,7 @@
     {% for comment in latestComments %}
         <article class="comment">
             <header>
-                <p class="small">{{ comment.user }} commented on</p>
+                <p class="small"><span class="highlight">{{ comment.user }}</span> commented on</p>
                     <a href="{{ path('BloggerBlogBundle_blog_show',{'id':comment.blog.id,'slug':comment.blog.slug}) }}#comment-{{ comment.id }}">
                         {{ comment.blog.title }}
                     </a>

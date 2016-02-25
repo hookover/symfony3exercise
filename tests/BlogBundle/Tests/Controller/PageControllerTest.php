@@ -35,18 +35,30 @@ class PageControllerTest extends WebTestCase
     public function testCountact()
     {
         $client=static::createClient();
-        $crawler=$client->request('GET','/contact');
+        $crawler=$client->request('GET','/blog/contact');
 
         $this->assertEquals(1,$crawler->filter('h1:contains("Contact symblog")')->count());
 
-        $form=$crawler->selectButton('Submit')->form();
-        $form['blogger_blogbundle_enquirytype[name]']='name';
-        $form['blogger_blogbundle_enquirytype[email]']      = 'email@email.com';
-        $form['blogger_blogbundle_enquirytype[subject]']    = 'Subject';
-        $form['blogger_blogbundle_enquirytype[body]']       = 'The comment body must be at least 50 characters long as there is a validation constrain on the Enquiry entity';
+        $form=$crawler->selectButton('提交')->form();
+        $form['enquiry[name]']       = 'name';
+        $form['enquiry[email]']      = 'test@qq.com';
+        $form['enquiry[subject]']    = 'Subject';
+        $form['enquiry[body]']       = 'The comment body must be at least 50 characters long as there is a validation constrain on the Enquiry entity';
 
-        $crawler=$client->submit($form);
+        $client->submit($form);
 
-        $this->assertEquals(1,$crawler->filter('.blogger-note:contains("Your contact enquiry was successfully sent. Thank you!")')->count());
+        if($profile=$client->getProfile())
+        {
+            $swiftMailerProfiler = $profile->getCollector('swiftmailer');
+            $this->assertEquals(1,$swiftMailerProfiler->getMessageCount());
+            $messages=$swiftMailerProfiler->getMessages();
+            $message=array_shift($messages);
+
+            $symblogEmail = $client->getContainer()->getParameter('blogger_blog.comments.latest_comment_limit');
+            $this->assertArrayHasKey($symblogEmail,$message->getTo());
+        }
+
+        $crawler=$client->followRedirect();
+        $this->assertEquals(1,$crawler->filter('.alert-success:contains("Your contact enquiry was successfully sent. Thank you!")')->count());
     }
 }
