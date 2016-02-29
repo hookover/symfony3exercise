@@ -32,7 +32,8 @@
         "jms/serializer-bundle": "^1.1",
         "symfony/assetic-bundle": "^2.7",
         "doctrine/doctrine-migrations-bundle": "^1.1",
-        "phpunit/phpunit": "^5.2"
+        "phpunit/phpunit": "^5.2",
+        "knplabs/knp-paginator-bundle": "^2.5"
     },
     "require-dev": {
         "sensio/generator-bundle": "^3.0",
@@ -67,14 +68,5 @@
         "incenteev-parameters": {
             "file": "app/config/parameters.yml"
         }
-    },
-    "repositories": [
-        {
-            "packagist": false
-        },
-        {
-            "type": "composer",
-            "url": "http://packagist.cn"
-        }
-    ]
+    }
 }

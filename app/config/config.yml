@@ -51,6 +51,8 @@ assetic:
         - BloggerBlogBundle
     filters:
         cssrewrite: ~
+        yui_css:
+            jar: /usr/local/lib/node_modules/yuicompressor/build/yuicompressor-2.4.8.jar
         less:
             node: /usr/local/bin/node
             node_paths: [/usr/local/lib/node_modules, /opt/lessc]

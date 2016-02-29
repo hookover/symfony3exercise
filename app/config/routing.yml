@@ -1,3 +1,7 @@
+app_news:
+    resource: "@AppBundle/Controller/NewsController.php"
+    type:     annotation
+
 blogger_blog:
     resource: "@BloggerBlogBundle/Resources/config/routing.yml"
     prefix:   /
